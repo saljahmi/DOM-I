@@ -38,5 +38,111 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
+const logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+// header
+
+const allLinks = document.querySelectorAll('a')
+
+const link1 = allLinks[0]
+const link2 = allLinks[1]
+const link3 = allLinks[2]
+const link4 = allLinks[3]
+const link5 = allLinks[4]
+const link6 = allLinks[5]
+
+
+link1.textContent = siteContent["nav"]["nav-item-1"]
+link2.textContent = siteContent["nav"]["nav-item-2"]
+link3.textContent = siteContent["nav"]["nav-item-3"]
+link4.textContent = siteContent["nav"]["nav-item-4"]
+link5.textContent = siteContent["nav"]["nav-item-5"]
+link6.textContent = siteContent["nav"]["nav-item-6"]
+
+// use map method above to redo this^^
+
+// cta
+
+const ctaText = document.querySelector('.cta-text')
+
+const ctaTitle = ctaText.querySelector("h1")
+ctaTitle.textContent = siteContent["cta"]["h1"]
+
+const ctaButton = ctaText.querySelector('button')
+ctaButton.textContent = siteContent['cta']['button']
+
+const ctaImg = document.getElementById("cta-img")
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+// main
+
+//top
+
+const middleSection = document.getElementsByClassName("text-content")
+
+console.log(middleSection)
+
+const features = middleSection[0]
+
+const featuresTitle = features.querySelector("h4")
+featuresTitle.textContent = siteContent['main-content']['features-h4']
+
+const featuresText = features.querySelector('p')
+featuresText.textContent = siteContent["main-content"]["features-content"]
+
+const about = middleSection[1]
+
+const aboutTitle = about.querySelector("h4")
+aboutTitle.textContent = siteContent["main-content"]["about-h4"]
+
+const aboutText = about.querySelector("p")
+aboutText.textContent = siteContent["main-content"]["about-content"]
+
+const middleImg = document.getElementById("middle-img")
+middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+//bottom
+
+const services = middleSection[2]
+
+const servicesTitle = about.querySelector("h4")
+servicesTitle.textContent = siteContent["main-content"]["services-h4"]
+
+const servicesText = about.querySelector("p")
+servicesText.textContent = siteContent["main-content"]["services-content"]
+
+
+const product = middleSection[3]
+
+const productTitle = about.querySelector("h4")
+productTitle.textContent = siteContent["main-content"]["product-h4"]
+
+const productText = about.querySelector("p")
+productText.textContent = siteContent["main-content"]["product-content"]
+
+
+const vision = middleSection[4]
+
+const visionTitle = about.querySelector("h4")
+visionTitle.textContent = siteContent["main-content"]["vision-h4"]
+
+const visionText = about.querySelector("p")
+visionText.textContent = siteContent["main-content"]["vision-content"]
+
+
+// contact
+
+const contactSection = document.querySelector('.contact')
+
+const contactTitle = contactSection.querySelector("h4")
+contactTitle.textContent = siteContent["contact"]["contact-h4"]
+
+const contactAddress = contactSection.querySelector("p")
+contactAddress.textContent = siteContent["contact"]["address"]
+
+const contactPhone = contactAddress.nextElementSibling
+contactPhone.textContent = siteContent["contact"]["phone"]
+
+const contactEmail = contactPhone.nextElementSibling
+contactEmail.textContent = siteContent["contact"]["email"]
