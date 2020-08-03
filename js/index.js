@@ -78,12 +78,8 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 // main
 
 //top
-
-const middleSection = document.getElementsByClassName("text-content")
-
-console.log(middleSection)
-
-const features = middleSection[0]
+const topContent = document.querySelector(".top-content")
+const features = topContent.querySelector('.text-content')
 
 const featuresTitle = features.querySelector("h4")
 featuresTitle.textContent = siteContent['main-content']['features-h4']
@@ -91,7 +87,7 @@ featuresTitle.textContent = siteContent['main-content']['features-h4']
 const featuresText = features.querySelector('p')
 featuresText.textContent = siteContent["main-content"]["features-content"]
 
-const about = middleSection[1]
+const about = features.nextElementSibling
 
 const aboutTitle = about.querySelector("h4")
 aboutTitle.textContent = siteContent["main-content"]["about-h4"]
@@ -99,35 +95,36 @@ aboutTitle.textContent = siteContent["main-content"]["about-h4"]
 const aboutText = about.querySelector("p")
 aboutText.textContent = siteContent["main-content"]["about-content"]
 
+
 const middleImg = document.getElementById("middle-img")
 middleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 //bottom
 
-const services = middleSection[2]
+const bottomContent = document.querySelector(".bottom-content")
+const services = bottomContent.querySelector(".text-content")
 
-const servicesTitle = about.querySelector("h4")
+const servicesTitle = services.querySelector("h4")
 servicesTitle.textContent = siteContent["main-content"]["services-h4"]
 
-const servicesText = about.querySelector("p")
+const servicesText = services.querySelector("p")
 servicesText.textContent = siteContent["main-content"]["services-content"]
 
+const product = services.nextElementSibling
 
-const product = middleSection[3]
-
-const productTitle = about.querySelector("h4")
+const productTitle = product.querySelector("h4")
 productTitle.textContent = siteContent["main-content"]["product-h4"]
 
-const productText = about.querySelector("p")
+const productText = product.querySelector("p")
 productText.textContent = siteContent["main-content"]["product-content"]
 
 
-const vision = middleSection[4]
+const vision = product.nextElementSibling
 
-const visionTitle = about.querySelector("h4")
+const visionTitle = vision.querySelector("h4")
 visionTitle.textContent = siteContent["main-content"]["vision-h4"]
 
-const visionText = about.querySelector("p")
+const visionText = vision.querySelector("p")
 visionText.textContent = siteContent["main-content"]["vision-content"]
 
 
@@ -146,3 +143,8 @@ contactPhone.textContent = siteContent["contact"]["phone"]
 
 const contactEmail = contactPhone.nextElementSibling
 contactEmail.textContent = siteContent["contact"]["email"]
+
+// footer
+
+const foot = document.querySelector('footer')
+foot.textContent = siteContent["footer"]["copyright"]
