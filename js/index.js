@@ -45,20 +45,12 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 
 const allLinks = document.querySelectorAll('a')
 
-const link1 = allLinks[0]
-const link2 = allLinks[1]
-const link3 = allLinks[2]
-const link4 = allLinks[3]
-const link5 = allLinks[4]
-const link6 = allLinks[5]
-
-
-link1.textContent = siteContent["nav"]["nav-item-1"]
-link2.textContent = siteContent["nav"]["nav-item-2"]
-link3.textContent = siteContent["nav"]["nav-item-3"]
-link4.textContent = siteContent["nav"]["nav-item-4"]
-link5.textContent = siteContent["nav"]["nav-item-5"]
-link6.textContent = siteContent["nav"]["nav-item-6"]
+allLinks[0].textContent = siteContent["nav"]["nav-item-1"]
+allLinks[1].textContent = siteContent["nav"]["nav-item-2"]
+allLinks[2].textContent = siteContent["nav"]["nav-item-3"]
+allLinks[3].textContent = siteContent["nav"]["nav-item-4"]
+allLinks[4].textContent = siteContent["nav"]["nav-item-5"]
+allLinks[5].textContent = siteContent["nav"]["nav-item-6"]
 
 // use map method above to redo this^^
 
@@ -148,3 +140,9 @@ contactEmail.textContent = siteContent["contact"]["email"]
 
 const foot = document.querySelector('footer')
 foot.textContent = siteContent["footer"]["copyright"]
+
+// adding content
+
+allLinks.forEach(link =>{
+  link.style.color = 'green'
+})
