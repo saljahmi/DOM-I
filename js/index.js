@@ -146,3 +146,12 @@ foot.textContent = siteContent["footer"]["copyright"]
 allLinks.forEach(link =>{
   link.style.color = 'green'
 })
+
+const blogLink = allLinks[0].cloneNode(true)
+blogLink.textContent = "Blog"                         
+nav = document.querySelector('nav').prepend(blogLink)   
+
+const moreLink = allLinks[0].cloneNode(true)
+moreLink.textContent = "More"                         
+nav = document.querySelector('nav').appendChild(moreLink)   
+
